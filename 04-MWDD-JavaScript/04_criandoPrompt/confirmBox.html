@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Confirm Box</h2>
+
+
+<button onclick="myFunction()">Clique aqui!</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var txt;
+  if (confirm("Pressione o Botão!")) {
+    txt = "Voçê pressionou OK!";
+  } else {
+    txt = "Voçê pressionou Cancelar!";
+  }
+  document.getElementById("demo").innerHTML = txt;
+}
+</script>
+
+</body>
+</html>
