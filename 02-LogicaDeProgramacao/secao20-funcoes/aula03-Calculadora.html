@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>Lógica de programação com Javascript Tabuada</title>
+</head>
+<body>
+<h1>Lógica de programação com Javascript</h1>
+    <h2>TABUADA</h2>
+    
+    <button onclick="somar()">Soma</button>
+    <button onclick="subtrair()">Subtração</button>
+    <button onclick="multiplicar()">Multiplicação</button>
+    <button onclick="dividir()">Divisão</button>
+    
+    <div id="output"></div>
+    
+    <script>
+        
+        var n1 = prompt('digite um numero');
+        n1 = parseFloat(n1);
+        
+        escreve();
+        
+        function escreve(){
+            var output = document.querySelector('#output');
+            output.innerHTML = n1;
+        }
+        
+        function somar(){
+            var n = prompt('digite um numero');
+            n = parseFloat(n);
+            n1 = n1 + n;
+            escreve();
+        }
+
+            function subtrair(){
+            var n = prompt('digite outro numero');
+            n = parseFloat(n);
+            n1 = n1 - n;
+            escreve();
+        }
+        
+            function multiplicar(){
+            var n = prompt('digite outro numero');
+            n = parseFloat(n);
+            n1 = n1 * n;
+            escreve();
+        }
+        
+            function dividir(){
+            var n = prompt('digite outro numero');
+            n = parseFloat(n);
+            n1 = n1 / n;
+            escreve();
+        }
+
+    </script>
+    
+</body>
+</html>
