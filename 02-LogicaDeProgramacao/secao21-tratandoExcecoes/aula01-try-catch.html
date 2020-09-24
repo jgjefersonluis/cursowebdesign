@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>Lógica de programação com Javascript Tabuada</title>
+</head>
+<body>
+<h1>Lógica de programação com Javascript</h1>
+    <h2>TABUADA</h2>
+    
+    <button onclick="iniciarCalculo('+')">+</button>
+    <button onclick="iniciarCalculo('-')">-</button>
+    <button onclick="iniciarCalculo('*')">*</button>
+    <button onclick="iniciarCalculo('/')">/</button>
+    
+    <div id="output"></div>
+    
+    <script>
+        
+        var n2 = prompt('digite um numero');
+        n2 = parseFloat(n2);
+        
+        escreve(n2);
+        
+        function iniciarCalculo(simbolo){
+            var n1 = document.querySelector('#output').textContent;
+            n1 = parseFloat(n1);
+            
+            var n2 = prompt('digite outro número');
+            n2 = parseFloat(n2);
+            
+            try{
+                var msg = calcular(simbolo, n1, n2);
+                
+            } catch (e) {
+              alert (e);
+                //console.log(e);
+                
+        }
+            
+        //    var msg = calcular(simbolo, n1, n2);
+            
+            escreve(msg);
+            
+        }
+        
+        function escreve(mensagem){
+            var output = document.querySelector('#output');
+            output.innerHTML = mensagem;
+        }
+        
+        function calcular(simbolo, n1, n2){
+            
+            if(simbolo !== '+' && simbolo !== '-' && simbolo !== '*' && simbolo !== '/'){
+                
+                throw new Error('digite um simbolo valido')
+                
+             //   alert('digite um simbolo valido');
+             //   return 0;
+            }
+            
+            if(isNaN(n1) || isNaN(n2)){
+                
+                throw new Error('chama passando somente numeros');
+               
+                //alert('chama passando somente numeros');
+                //return 0;
+            }
+            
+            
+            var numeroCalculado=null;
+            
+            switch(simbolo){
+                case '+':
+                  
+                    numeroCalculado = n1 + n2;
+                    break;
+                case '-':
+                    numeroCalculado = n1 - n2;
+                    break;
+                case '*':
+                    numeroCalculado = n1 * n2;
+                    break;
+                case '/':
+                    numeroCalculado = n1 / n2;
+                    break;
+            }
+            
+            return numeroCalculado;
+            
+            
+            escreve();
+        }
+        
+  
+    </script>
+    
+</body>
+</html>
