@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>Lógica de programação com Javascript Tabuada</title>
+</head>
+<body>
+<h1>Lógica de programação com Javascript</h1>
+s
+    <script>
+        
+        var arr = new Array(1,2,3,5,2);
+        
+        // mostrar na tela a soma dos números pares da array acima
+        
+        var soma = 0;
+        for(var i = 0; i < arr.length; i++){
+            console.log(i);
+            console.log(arr[i]);
+            
+            if( !isNaN(arr[i]) && arr[i] % 2 === 0){
+                soma += arr[i];
+            }
+        }
+        
+        alert('a soma dos numeros pares é: ' + soma);
+    
+    </script>
+    
+</body>
+</html>
