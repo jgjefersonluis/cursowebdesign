@@ -2,13 +2,31 @@
 <!-- doctype informa ao agente de usuario a versão do html que deve ser renderizada-->
 <html lang="pt-br">
     <head>
-        <title> pagina de exemplo estrutura basica </title>
+        <title> iRock - The Virtual Pet Rock </title>
         <meta charset="utf-8">
         <meta name="author" content="Daniel">
         <meta name="description" content="descrição bacanuda">
         <meta name="keywords" content="html5, tecnologia">
+        
+        <script>
+            function touchRock(){
+                var userName = prompt("What is your name?", "Enter your name here.");
+                
+                if (userName){
+                    alert("It is good to meet you, " + userName + ".");
+                    document.getElementById("rockImg").src = "iRock.png";
+                }
+            }
+        
+        
+        </script>
     </head>
-    <body>
-        <h1>estrutura basica</h1>
+    <body onload=alert("hello, eu sou a rocha de Estimação.");>
+        <div style="margin-top: 100px; text-align: center">
+            <img id="rockImg" src="iRock.png" alt="iRock" style="cursor:pointer" onclick="touchRock();">
+        
+        </div>
+        
+        
     </body>
 </html>

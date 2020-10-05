@@ -2,13 +2,75 @@
 <!-- doctype informa ao agente de usuario a versão do html que deve ser renderizada-->
 <html lang="pt-br">
     <head>
-        <title> pagina de exemplo estrutura basica </title>
+        <title> House Finder </title>
         <meta charset="utf-8">
         <meta name="author" content="Daniel">
         <meta name="description" content="descrição bacanuda">
         <meta name="keywords" content="html5, tecnologia">
+        
+        <script>
+            
+            function validateNumber(value){
+                // valide o numero
+                if(!isNumber(value)){
+                    alert("Entre o número: ");
+                }
+            }
+        
+            function validateZIPCode(value){
+            // valide o codigo postal
+                if (!isZIPCode(value)){
+                    alert("Entre o CEP no formulario XXXXXXXX: ");
+                }
+            }
+            
+            function calcPrice(){
+                var maxPrice = document.getElementById("income").value * 4;
+                    alert("Você pode comprar uma casa de ate $: " + maxPrice + ".");
+                
+            }
+            
+            function findHouse(form){
+                var bedrooms = document.getElementById("bedrooms").value;
+                var zipCode = document.getElementById("zip").value;
+                
+                
+            // Exiba uma lista de casas coincidentes a partir do servidor
+            
+            form.submit();
+                
+            }
+        
+        </script>
     </head>
     <body>
-        <h1>estrutura basica</h1>
+        
+        <div id="frame">
+            <div id="header">Pronto para localizar uma casa nova casa?</div>
+                <div id="left">
+                    <img src="house.png" alt="House"/>
+                </div>
+            
+            <form name="orderform" action="..." method="post">
+               
+                <div class="fi eld">Entre a renda anual:  
+                <input id="income" type="text" size="12" onblur="validateNumber(this.value)"> </div>
+                
+                <div class="fi eld">Entre o numero de quartos:  
+                <input id="bedrooms" type="text" size="6" onblur="validateNumber(this.value)"> </div>
+                
+                <div class="fi eld">Entre o CEP:  
+                <input id="zip" type="text" size="10" onblur="validateZIPCode(this.value)"> </div>
+                
+         
+                <input  type="button" value="Calcula o preço" onclick="calcPrice();"> 
+                    
+                <input  type="button" value="Localizar casas" onclick="fi ndHouses(this.form);"> 
+            
+
+            </form>
+        </div>
+            
+        
     </body>
 </html>
